@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'PT Sans', sans-serif;
+  background: #f1f1f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #111;
+  text-decoration: none;
+}
+
+p {
+  line-height: 25px;
+}
+
+main p,
+main span,
+main small {
+  color: #a7a7a7;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding: 2em 2em 0 2em;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+main,
+.bar-bottom {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 1.5em;
+}
+
+main {
+  min-height: 75vh;
+}
+
+.title {
+  position: relative;
+}
+
+.title .titleOverlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #111;
+  z-index: -1;
+  transition: 0.3s ease;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: top left;
+}
+
+.titleText {
+  color: #111;
+}
+
+.thumbs img {
+  width: 3em;
+  height: 3em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.thumbs .thumbs-active {
+  border: 3px #ccc solid;
+}
+
+.showcase img {
+  width: 100%;
+  transform-origin: bottom;
+}
+
+.showcase>div {
+  position: relative;
+  height: 100%;
+}
+
+.shadow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1em;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  filter: blur(3px);
+  z-index: 0;
+}
+
+.options>div,
+.options>ul {
+  padding: 0.6em 0;
+}
+
+.sizes li {
+  width: 3.2em;
+  height: 3.2em;
+  border: 1px #111 solid;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3.2em;
+  font-size: 0.8em;
+  transition: 0.3s;
+}
+
+.size-active {
+  background: #111;
+  color: #fff;
+}
+
+.reviews,
+.pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pricing .price {
+  color: #111;
+}
+
+.reviews h4,
+.pricing h4 {
+  color: #ccc;
+}
+
+.reviews .stars li {
+  margin: 0;
+  cursor: default;
+}
+
+.options {
+  justify-self: end;
+}
+
+.options ul li {
+  display: inline-block;
+  margin: 0 0.2em;
+  cursor: pointer;
+}
+
+.options ul li:nth-child(1) {
+  margin-left: 0;
+}
+
+.colors li {
+  width: 2em;
+  height: 2em;
+  background: red;
+  border-radius: 50%;
+  border: 3px #f6f6f6 solid;
+}
+
+.colors .color-active {
+  border-color: #111;
+}
+
+.bar-bottom {
+  background: #fff;
+  padding: 1.5em;
+}
+
+.bar-bottom div,
+.bar-bottom a {
+  display: flex;
+  align-items: center;
+}
+
+.bar-bottom span {
+  cursor: pointer;
+}
+
+.controls {
+  justify-content: space-evenly;
+}
+
+.arrows span {
+  font-size: 2.5em;
+}
+
+.pagination {
+  display: flex;
+  margin: 0 0.5em;
+}
+
+.pag {
+  background: #ccc;
+  width: 3em;
+  height: 0.2em;
+  margin: 0 7px;
+  transition: 0.3s;
+}
+
+.pag-active {
+  background: #111;
+}
+
+.arr-left {
+  transform: rotate(180deg);
+}
+
+.cart {
+  justify-self: center;
+}
+
+.cart button {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 1.3em 2em;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  margin-right: 1.5em;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.cart button:hover {
+  background: #000;
+}
+
+/* Increase title size on large screens */
+@media screen and (min-width: 1250px) {
+  .title {
+    font-size: 2.5em;
+  }
+}
+
+/* Shoe Jump Animation */
+@keyframes jump {
+  40% {
+    transform: translateY(-8em) rotate(10deg);
+  }
+
+  70% {
+    transform: translateY(-8em) rotate(0deg);
+  }
+
+  85% {
+    transform: translateY(0) rotate(0deg)
+  }
+
+  87% {
+    transform: scaleY(0.8);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+/* Shadow Animations */
+@keyframes shadow {
+  50% {
+    transform: translateX(-50%) scaleX(0.8);
+  }
+
+  100% {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+}
+
+@keyframes shadow2 {
+  50% {
+    width: 0;
+    transform: translateX(-50%);
+  }
+
+  100% {
+    width: 100%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Shoe fade animation */
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Title animation */
+@keyframes title {
+  0% {
+    transform: scaleX(0);
+    transform-origin: top left;
+  }
+
+  30% {
+    transform: scaleX(1);
+    transform-origin: top left;
+  }
+
+  60% {
+    transform: scaleX(1);
+    transform-origin: top right;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: top right;
+  }
+}
+
+/* Shoe Replace Animation */
+@keyframes replace {
+  5% {
+    transform: scaleY(0.8);
+  }
+
+  10% {
+    transform: scaleY(1);
+  }
+
+  40% {
+    transform: translateY(-100vh);
+  }
+
+  60% {
+    transform: translateY(-100vh);
+  }
+
+  85% {
+    transform: translateY(0);
+  }
+
+  90% {
+    transform: scaleY(0.8);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
