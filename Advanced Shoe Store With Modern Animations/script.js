@@ -35,6 +35,7 @@ const colors = [
 ];
 
 const prices = ["150", "250", "175"];
+console.log(prices);
 
 const names = [
   ["Red Nike Jordan Max Aura 3", "Black Nike Jordan Max Aura 3"],
