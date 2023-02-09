@@ -15,6 +15,14 @@ The Advanced Shoe Store Web App is an online shopping platform that allows users
 
 **Client:** JavaScript, HTML5, CSS3
 
+- Testing the App Locally
+Once you've built the app, you may test it locally by running npm run preview command.
+
+```bash
+  $ npm run build
+  $ npm run preview
+```
+
 ## Deployment
 
 If you setup your JavaScript using vite you can deploy this project using
