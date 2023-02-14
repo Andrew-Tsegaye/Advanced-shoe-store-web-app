@@ -31,6 +31,4 @@ If you setup your JavaScript using vite you can deploy this project using
   npm run deploy
 ```
 
-## Author
-
-- [@Andrew-Tsegaye](https://www.github.com/Andrew-Tsegaye)
+- Designed and developed by [Andrew-Tsegaye](https://www.github.com/Andrew-Tsegaye)
